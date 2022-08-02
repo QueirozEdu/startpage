@@ -65,6 +65,10 @@ main {
     border-bottom: 1px solid #7c7c7c;
 }
 
+#serch_box:focus {
+    border-style: none;
+}
+
 #search_button {
     color: #e2d3ba;
     background-color: rgba(94, 94, 94, 0.397);
