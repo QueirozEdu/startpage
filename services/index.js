@@ -3,13 +3,12 @@ document.onreadystatechange = clock();
 function clock() {
     const time = new Date();
     document.getElementById("time").innerText = time.toLocaleTimeString();
-    console.log(time);
+    var hour = time.getHours();
 
-
-    if (time.getHours < 5 || time.getHours >= 18) {
-        document.getElementById("greeting").innerHTML = "Good evening."
+    if (hour < 5 || hour >= 18) {
+        document.getElementById("greeting").innerText = "Good evening."
     }
-    else if (time.getHours < 12) {
+    else if (hour < 12) {
         document.getElementById("greeting").innerText = "Good morning."
     }
     else {
