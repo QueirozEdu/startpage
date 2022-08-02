@@ -4,53 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/reset.css">
     <link rel="stylesheet" href="/assets/styles.css">
     <title>Start Page</title>
 </head>
 <body>
-    <header>
-        <h1 class="titleing">Good Morning</h1>
-        <h2 class="time">00:00</h2>
-    </header>
-    <main>
-        <section class="search_tool">
-            <select name="search" id="tool_selector">
-                <option value="google">Google</option>
-                <option value="duckduckgo">DuckDuckGo</option>
-            </select>
-            <form action="">
-                <input type="text" name="search_content" id="search_content" placeholder="Enter search term">
-                <input type="submit" value="Search">
-            </form>
-        </section>
-        <section class="links_table">
-            <div>
-                <ul class="geral">
-                    <li class="list_title">Geral</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="dev">
-                    <li class="list_title">Dev</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul class="media">
-                <ul>
-                    <li class="list_title">Media</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="social">
-                    <li class="list_title">Social</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </section>
-    </main>
+    <div class="main-frame">
+        <header class="header">
+            <h1 class="titleing" id="greeting"></h1>
+            <h2 class="time" id="time"></h2>
+        </header>
+        <main>
+            <section class="search_tool">
+                <select name="search" id="tool_selector">
+                    <option value="google">Google</option>
+                    <option value="duckduckgo">DuckDuckGo</option>
+                </select>
+                <form action="">
+                    <input type="text" name="search_box" id="search_box" placeholder="Enter search term">
+                    <input type="submit" value="Search" id="search_button" onclick="onSearch()">
+                </form>
+            </section>
+            <section>
+                <div class="links_table">
+                    <ul class="geral">
+                        <li class="list_title">Geral</li>
+                        <li><a href="https://mail.google.com/mail/u/1/#inbox">Gmail</a></li>
+                        <li><a href="http://192.168.15.66">Neptune</a></li>
+                        <li></li>
+                    </ul>
+                    <ul class="dev">
+                        <li class="list_title">Dev</li>
+                        <li><a href="https://github.com/">Github</a></li>
+                        <li><a href="https://www.w3schools.com/">W3schools</a></li>
+                        <li><a href="https://pt.stackoverflow.com/">StackOverflor</a></li>
+                    </ul class="media">
+                    <ul>
+                        <li class="list_title">Media</li>
+                        <li><a href="https://www.youtube.com/">YouTube</a></li>
+                        <li><a href="https://app.plex.tv/desktop/#!/">Plex</a></li>
+                        <li><a href="https://www.netflix.com/">Netflix</a></li>
+                    </ul>
+                    <ul class="social">
+                        <li class="list_title">Social</li>
+                        <li><a href="https://web.whatsapp.com/">Whatsapp Web</a></li>
+                        <li><a href="https://www.reddit.com/">Reddit</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
+<script src="/services/index.js"></script>
